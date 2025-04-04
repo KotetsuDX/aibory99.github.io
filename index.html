@@ -8,10 +8,11 @@
     body {
       margin: 0;
       font-family: "Helvetica Neue", sans-serif;
-      background-color: #000;
       color: #fff;
+      background-color: #000;
       overflow-x: hidden;
     }
+
     .slideshow {
       position: fixed;
       top: 0;
@@ -21,42 +22,37 @@
       z-index: -1;
       overflow: hidden;
     }
+
     .slideshow img {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      animation: slideShow 15s infinite;
+      animation: slideShow 10s infinite;
       opacity: 0;
     }
-    .slideshow img:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .slideshow img:nth-child(2) {
-      animation-delay: 7.5s;
-    }
+
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 5s; }
+
     @keyframes slideShow {
-      0% { opacity: 0; transform: scale(1.1); }
-      10% { opacity: 1; transform: scale(1.05); }
-      40% { opacity: 1; transform: scale(1.05); }
-      50% { opacity: 0; transform: scale(1.1); }
-      100% { opacity: 0; }
+      0% { opacity: 0; transform: scale(1.1) translateX(0); }
+      10% { opacity: 1; transform: scale(1.05) translateX(-2%); }
+      40% { opacity: 1; transform: scale(1.05) translateX(2%); }
+      50% { opacity: 0; transform: scale(1.1) translateX(0); }
+      100% { opacity: 0; transform: scale(1.1) translateX(0); }
     }
-    header, nav, section, footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 1em auto;
-      padding: 1.5em;
-      border-radius: 10px;
-      max-width: 960px;
-    }
+
     nav {
       background-color: #ddd;
+      padding: 0.5em;
       text-align: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1em;
     }
+
     nav a {
       font-size: clamp(14px, 2.5vw, 18px);
       color: #004080;
@@ -66,11 +62,39 @@
       border-radius: 6px;
       transition: background-color 0.3s;
     }
+
     nav a:hover {
       background-color: #c0dfff;
     }
-    h1, h2 {
-      color: #ffffff;
+
+    form {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 0.7em 1.5em;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #0060c0;
     }
   </style>
 </head>
@@ -101,89 +125,46 @@
     <p><strong>代表者：</strong>遠藤 和則</p>
     <p><strong>設立：</strong>1990年</p>
     <p><strong>業種：</strong>建設業（精密解体・コンクリート切断のエキスパート集団）</p>
-<p>高精度が求められる構造物への対応力を武器に、現場の要望に柔軟かつ迅速に対応。</p>
-<blockquote style="background: rgba(255,255,255,0.08); padding: 1em; border-left: 4px solid #80c0ff; margin-top: 1em;">
-  熟練の技術者による「誤差ゼロの施工力」で、改修・解体・設備工事など多様なニーズに応える専門職人チームです。
-</blockquote>
+    <p>高精度が求められる構造物への対応力を武器に、現場の要望に柔軟かつ迅速に対応。</p>
+    <blockquote style="background: rgba(255,255,255,0.08); padding: 1em; border-left: 4px solid #80c0ff; margin-top: 1em;">
+      熟練の技術者による「誤差ゼロの施工力」で、改修・解体・設備工事など多様なニーズに応える専門職人チームです。
+    </blockquote>
+  </section>
 
-<section id="services">
-  <h2>事業内容</h2>
-  <p>当社は、コンクリート構造物に対する高精度な穿孔・切断工事を専門とするプロフェッショナル集団です。現場ごとの構造特性や工期、環境条件に応じた最適な施工方法を提案・実施し、「安全・確実・迅速」をモットーに対応いたします。</p>
-  <ul>
-    <li><strong>コアボーリング工事（コア抜き）</strong><br>
-    電気・ガス・水道・空調など、各種設備配管のための開口を高精度に実施。寸法・角度・深さなどの施工誤差を極限まで抑え、再施工のリスクを最小限に。</li>
-    
-    <li><strong>ワイヤーソー工事</strong><br>
-    大型構造物の解体や開口部の形成に威力を発揮。振動や騒音を抑えた切断が可能で、近隣環境への影響を最小限に配慮。</li>
-    
-    <li><strong>ウォールソー・解体撤去工事</strong><br>
-    鉄筋コンクリート壁や床への切断をスムーズに実施し、建物の改修や耐震補強に対応。壁・床・梁など部位に応じた最適な刃選定と施工で、精密な施工が可能です。</li>
-  </ul>
-</section>
+  <section id="services">
+    <h2>事業内容</h2>
+    <p>当社は、コンクリート構造物に対する高精度な穿孔・切断工事を専門とするプロフェッショナル集団です。現場ごとの構造特性や工期、環境条件に応じた最適な施工方法を提案・実施し、「安全・確実・迅速」をモットーに対応いたします。</p>
+    <ul>
+      <li><strong>コアボーリング工事（コア抜き）</strong><br>電気・ガス・水道・空調など、各種設備配管のための開口を高精度に実施。</li>
+      <li><strong>ワイヤーソー工事</strong><br>大型構造物の解体や開口部の形成に威力を発揮。</li>
+      <li><strong>ウォールソー・解体撤去工事</strong><br>鉄筋コンクリート壁や床への切断をスムーズに実施。</li>
+    </ul>
+  </section>
 
- <section id="strengths" class="box">
-  <h2>当社の強み</h2>
-  <p><strong>熟練の技術 × 誤差ゼロの施工力。</strong></p>
-  <p>私たちは、コンクリート構造物の穿孔・切断において、<strong>ミリ単位の精度</strong>を実現する専門職人チームです。</p>
-  <p>長年の経験で培った技術と現場対応力により、<strong>設計図通りの施工</strong>はもちろん、<strong>現場での臨機応変な対応</strong>にも柔軟に応じます。</p>
-  <p>安全・品質・スピードすべてにおいて妥協せず、<strong>「任せて良かった」と言われる施工</strong>を心がけています。</p>
-</section>
+  <section id="strength">
+    <h2>当社の強み</h2>
+    <p><strong>熟練の技術 × 誤差ゼロの施工力。</strong></p>
+    <p>ミリ単位の精度を実現する専門職人チームです。</p>
+    <p>現場対応力により、図面通りの施工と臨機応変な対応を両立。</p>
+    <p>安全・品質・スピードの全てにおいて妥協せず、信頼される施工を目指します。</p>
+  </section>
 
- <section id="recruit" class="box">
-  <h2>採用情報</h2>
-  <p><strong>未来のインフラを支えるのは、あなたの技術です。</strong></p>
-  <p>有限会社コアシステムでは、<strong>「職人の誇り」を大切にする仲間</strong>を募集しています。</p>
-  <p>未経験からでも一流の技術を習得できる研修体制を整え、<strong>“人”を育てる風土</strong>があります。</p>
-  <p>現場ごとに求められる精度・対応力・判断力。<br>それらを磨き、地域社会に貢献することが、私たちの誇りです。</p>
-  <p>経験者はもちろん、<strong>「手に職をつけたい」「一生モノの技術を学びたい」</strong>という方も大歓迎。</p>
-  <p>一緒に、“ゼロ誤差の施工力”を次の時代へ。</p>
-</section>
+  <section id="recruit">
+    <h2>採用情報</h2>
+    <p><strong>未来のインフラを支えるのは、あなたの技術です。</strong></p>
+    <p>未経験者も安心の研修体制。人を育てる風土があります。</p>
+    <p>「手に職をつけたい」「一生モノの技術を学びたい」方も歓迎！</p>
+  </section>
 
   <section id="map">
     <h2>会社所在地（Googleマップ）</h2>
     <div style="border: 4px solid #333; border-radius: 8px; overflow: hidden; max-width: 100%;">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.4824124482727!2d139.6045043761249!3d35.51670867264056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601858d37f1bb461%3A0x25b16b66ee0f2730!2z44CSMjIzLTAwNTcg56We5aWI5bed55yM5qiq5rWc5biC6ZW36YeO5Yy65paw5bCP77yS5LiB55uu77yR77yV!5e0!3m2!1sja!2sjp!4v1712289575290!5m2!1sja!2sjp"
-        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
-
-  form {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1em;
-  border-radius: 8px;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-top: 0.3em;
-  border: none;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-form button {
-  background-color: #004080;
-  color: white;
-  border: none;
-  padding: 0.7em 1.5em;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s;
-}
-
-form button:hover {
-  background-color: #0060c0;
-}
-
 
   <footer>
     <p>&copy; 2025 有限会社コアシステム. All rights reserved.</p>
   </footer>
 </body>
 </html>
-
