@@ -71,12 +71,38 @@
     <p>信頼と技術で未来を支える建設業</p>
   </header>
 
-  <nav>
-    <a href="#about">会社概要</a>
-    <a href="#services">事業内容</a>
-    <a href="#map">所在地</a>
-    <a href="#contact">お問い合わせ</a>
-  </nav>
+  <style>
+  nav {
+    background-color: #ddd;
+    padding: 0.5em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  nav a {
+    font-size: clamp(14px, 2.5vw, 18px);
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #c0dfff;
+  }
+</style>
+
+<nav>
+  <a href="#about">会社概要</a>
+  <a href="#services">事業内容</a>
+  <a href="#map">所在地</a>
+  <a href="#contact">お問い合わせ</a>
+</nav>
 
   <section id="about">
     <h2>会社概要</h2>
