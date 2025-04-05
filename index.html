@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>有限会社コアシステム | トップページ</title>
   <style>
     body {
@@ -12,103 +12,76 @@
       color: #fff;
       overflow-x: hidden;
     }
-
-    /* ▼ 2枚ずつ表示されるスライドショー部分 ▼ */
     .slideshow {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       z-index: -1;
       overflow: hidden;
     }
+  .slideshow img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slideShow 15s infinite;
+  opacity: 0;
+}
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 5s; }
+.slideshow img:nth-child(3) { animation-delay: 10s; }
+.slideshow img:nth-child(4) { animation-delay: 15s; }
 
-    .slide-pair {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      opacity: 0;
-      animation: fadePair 15s infinite;
-    }
-
-    .slide-pair:nth-child(1) { animation-delay: 0s; }
-    .slide-pair:nth-child(2) { animation-delay: 5s; }
-    .slide-pair:nth-child(3) { animation-delay: 10s; }
-
-    .slide-pair img {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    @keyframes fadePair {
-      0%   { opacity: 0; }
-      5%   { opacity: 1; }
-      30%  { opacity: 1; }
-      35%  { opacity: 0; }
-      100% { opacity: 0; }
-    }
-    /* ▲ スライドショーここまで ▲ */
-
+@keyframes slideShow {
+  0% { opacity: 0; transform: scale(1.1); }
+  10% { opacity: 1; transform: scale(1.05); }
+  40% { opacity: 1; transform: scale(1.05); }
+  50% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 0; }
+}
     header, nav, section, footer {
       background-color: rgba(0, 0, 0, 0.6);
       margin: 1em auto;
       padding: 1.5em;
       border-radius: 10px;
       max-width: 960px;
-      color: #ffffff;
     }
-
     nav {
-      background-color: rgba(0, 0, 0, 0.5); /* 黒っぽく変更で見やすさUP */
+      background-color: #ddd;
       text-align: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1em;
     }
-
     nav a {
       font-size: clamp(14px, 2.5vw, 18px);
-      color: #ffffff; /* 白文字 */
+      color: #004080;
       text-decoration: none;
       font-weight: bold;
       padding: 0.5em 1em;
       border-radius: 6px;
       transition: background-color 0.3s;
     }
-
     nav a:hover {
-      background-color: #80c0ff;
-      color: #000;
+      background-color: #c0dfff;
     }
-
-    h1, h2, p, a {
+    h1, h2 {
       color: #ffffff;
     }
   </style>
 </head>
 <body>
-
-  <!-- ▼ 背景スライドショー（2枚同時）ここ ▼ -->
   <div class="slideshow">
-    <div class="slide-pair">
-      <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image001.jpg" alt="背景1" />
-      <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/IMG_5437.jpeg" alt="背景2" />
-    </div>
-    <div class="slide-pair">
-      <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image003.jpeg" alt="背景3" />
-      <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image002.jpeg" alt="背景4" />
-    </div>
-    <div class="slide-pair">
-      <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image005.jpg" alt="背景5" />
-      <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image004.jpg" alt="背景6" />
-    </div>
+    <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image001.jpg" alt="背景1">
+    <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/IMG_5437.jpeg" alt="背景2">
+    <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image003.jpeg" alt="背景3">
+    <img src="https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image002.jpeg" alt="背景4">
   </div>
-  <!-- ▲ スライドショーここまで ▲ -->
-<header>
+
+  <header>
     <h1>有限会社コアシステム</h1>
     <p>信頼と技術で未来を支える建設業</p>
   </header>
