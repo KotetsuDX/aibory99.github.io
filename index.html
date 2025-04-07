@@ -57,6 +57,18 @@
       gap: 1em;
     }
 
+    a.recruit{
+      color: #ffff00;
+    }
+
+    a.tel{
+      color: #FFFFFF;
+    }
+
+    a.mail{
+      color: #FFFFFF;
+    }
+
     nav a {
       font-size: clamp(14px, 2.5vw, 18px);
       color: #004080;
@@ -117,12 +129,12 @@
 
   <script>
     const imageUrls = [
-      "https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image001.jpg",
-      "https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/IMG_5437.jpeg",
-      "https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image003.jpeg",
-      "https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image002.jpeg",
-      "https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image004.jpg",
-      "https://raw.githubusercontent.com/KotetsuDX/aibory99.github.io/main/image005.jpg"
+      "image/image001.jpg",
+      "image/IMG_5437.jpeg",
+      "image/image003.jpeg",
+      "image/image002.jpeg",
+      "image/image004.jpg",
+      "image/image005.jpg"
     ];
 
     // 配列をランダムに並び替える関数
@@ -207,6 +219,7 @@
   <p>現場ごとに求められる精度・対応力・判断力。<br>それらを磨き、地域社会に貢献することが、私たちの誇りです。</p>
   <p>経験者はもちろん、<strong>「手に職をつけたい」「一生モノの技術を学びたい」</strong>という方も大歓迎。</p>
   <p>一緒に、“ゼロ誤差の施工力”を次の時代へ。</p>
+  <p><div align="center"><a href="recruit.html" class="recruit">採用ページへ</a></div></p>
 </section>
 
   <section id="map">
@@ -222,8 +235,8 @@
 
  <section id="contact">
   <h2>お問い合わせ</h2>
-  <p><strong>電話番号：</strong>045-544-7201</p>
-  <p><strong>メール：</strong>coasisutemu@orion.ocn.ne.jp</p>
+  <p><strong>電話番号：</strong><a href="tel:0455447201" class="tel">045-544-7201</a></p>
+  <p><strong>メール：</strong><a href="mailto:info@coresystem.jp" class="mail">info@coresystem.jp</a></p>
 
   <form action="https://formspree.io/f/xovekbjl" method="POST">
     <label style="display: block; margin-top: 1em;">
